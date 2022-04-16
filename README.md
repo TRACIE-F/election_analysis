@@ -45,11 +45,11 @@ To utilize the code again for a different election:
       * A sub-folder (Analysis) to hold the .txt file created by the code
  ![folder_structure](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/file_structure.png)
  
- * Importing the .csv
+ * Ensure the name of your .csv is updated in the code
    *  In line 9 of the Python code, we import the election data. If the folder structure matches the instructions above, simply adjust the name of the file to match your uploaded .csv. If the new .csv is named *Disctrict123_election_results* the updated code should read `file_to_load = os.path.join("Resources","District123_election_results.csv")`
 ![Code_change_1](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/Code_change_1.png)
 
- * Structure your data or adjust the code
+ * Structure your data or adjust the code for candidate and county names
    * To ensure the code pulls the appropriate data, one of two things must happen:
       * Adjust your data to ensure the candidate's name is in column C and the county's name is in column B OR
       * Alter the code in row 48 and 51 to match the new .csv structure. For example, if a new .csv has the candidate name in column D and county name in column A, row 48 of the code should be altered to read `candidate_name = row[3]` and row 51 of the code should be altered to read `county_name = row[0]`
