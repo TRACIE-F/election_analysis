@@ -51,6 +51,6 @@ To utilize the code again for a different election:
 
  * Structure your data or adjust the code for candidate and county names
    * To ensure the code pulls the appropriate data, one of two things must happen:
-      * Adjust your data to ensure the candidate's name is in column C and the county's name is in column B OR
+      * Adjust your data to ensure the candidate's name is in column C and the county's name is in column B **OR**
       * Alter the code in row 48 and 51 to match the new .csv structure. For example, if a new .csv has the candidate name in column D and county name in column A, row 48 of the code should be altered to read `candidate_name = row[3]` and row 51 of the code should be altered to read `county_name = row[0]`
 ![Code_change_3](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/Code_change_3.png)
