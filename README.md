@@ -15,11 +15,13 @@ The purpose of this audit is to determine the results of an election in Colorado
 Which county had the largest number of votes?
  * By a significant margin, **Denver County** had the highest voter turnout
 ![bigcounty]()
+
  * The candidate vote totals break dwon as follows:
    * **Charles Casper Stockham** won **23%** of the total votes with **85,213** votes.
    * **Diana Degettte** won **73.8%** of the total votes with **272,892** votes.
    * **Raymon Anthony Doane** won **3.1%** of the total votes with **11,606** votes.
  ![candidate_results](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/candidate_results.png)
+
  * The winner is **Diana Degettte** with **73.8%** of the total votes with **272,892** votes.
 ![the_winner_is](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/the_winner_is.png)
 
@@ -33,11 +35,16 @@ The structure of the election analysis code allows for re-use with relatively si
  * Calculate the percentages for voter turnout per county and for candidates
  * Print the results for the total votes, county turnout, largest voter turnout, candidate results, and overall winner to a .txt file
 
-To utilize the code again for a different election, the following needs to be adjusted:
+To utilize the code again for a different election:
+
  * Maintain the same file structure
    * It is vital for the code to maintain these folder structures:
-      * Why is this red?
- * The Import for the .csv
+      * A main folder (name is flexible) containing the Python code
+      * A sub-folder (Resources) containing the election results .csv file
+      * A sub-folder (Analysis) to hold the .txt file created by the code
+ ![folder_structure](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/file_structure.png)
+ 
+ * he Import for the .csv
    *  
 ![Code_change_1](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/Code_change_1.png)
 2. open file
