@@ -44,8 +44,8 @@ To utilize the code again for a different election:
       * A sub-folder (Analysis) to hold the .txt file created by the code
  ![folder_structure](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/file_structure.png)
  
- * he Import for the .csv
-   *  
+ * Importing the .csv
+   *  In line 9 of the Python code, we import the election data. If the folder structure matches the instructions above, simply adjust the name of the file to match your uploaded .csv. If the new .csv is named *Disctrict123_election_results* the updated code should read `code(file_to_load = os.path.join("Resources","District123_election_results.csv"))`
 ![Code_change_1](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/Code_change_1.png)
 2. open file
 ![Code_change_2](https://github.com/TRACIE-F/election_analysis/blob/main/Resources/Code_change_2.png)
