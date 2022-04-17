@@ -1,11 +1,6 @@
-# -*- coding: UTF-8 -*-
-"""PyPoll Homework Challenge Solution."""
-
 # Add our dependencies.
 import csv
 import os
-
-from pytz import country_names
 
 # Add a variable to load a file from a path.
 file_to_load = os.path.join("Resources", "election_results.csv")
@@ -31,7 +26,7 @@ winning_percentage = 0
 # 2: Track the largest county and county voter turnout.
 largest_county = ""
 county_voter_turnout = 0
-winning_percentage_b = 0
+winning_percentage_co = 0
 
 # Read the csv and convert it into a list of dictionaries
 with open(file_to_load) as election_data:
@@ -96,12 +91,12 @@ with open(file_to_save, "w") as txt_file:
     for county_name in county_votes:
         
         # 6b: Retrieve the county vote count.
-        votes_b = county_votes.get(county_name)
+        votes_co = county_votes.get(county_name)
         
         # 6c: Calculate the percentage of votes for the county.
-        vote_percentage_b = float(votes_b) / float(total_votes) * 100
+        vote_percentage_co = float(votes_co) / float(total_votes) * 100
         county_results = (
-            f"{county_name}: {vote_percentage_b:.1f}% ({votes_b:,})\n")
+            f"{county_name}: {vote_percentage_co:.1f}% ({votes_co:,})\n")
 
          # 6d: Print the county results to the terminal.
         print(county_results)
@@ -110,10 +105,10 @@ with open(file_to_save, "w") as txt_file:
         txt_file.write(county_results)
 
          # 6f: Write an if statement to determine the winning county and get its vote count.
-        if (votes_b > county_voter_turnout) and (vote_percentage_b > winning_percentage_b):
-            county_voter_turnout = votes_b
+        if (votes_co > county_voter_turnout) and (vote_percentage_co > winning_percentage_co):
+            county_voter_turnout = votes_co
             largest_county = county_name
-            winning_percentage_b = vote_percentage_b
+            winning_percentage_co = vote_percentage_co
 
     # 7: Print the county with the largest turnout to the terminal.
     # Print the winning candidate (to terminal)
